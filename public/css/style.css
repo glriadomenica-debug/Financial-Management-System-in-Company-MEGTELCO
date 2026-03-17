@@ -1,0 +1,436 @@
+/* Mengatur ukuran font header agar lebih kecil */
+.site-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;  
+    margin: 0;
+    color: wheat;
+    white-space: nowrap;
+   
+  }
+
+
+/* Topnav */
+.sb-topnav {
+  position: fixed; /* Tetap di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Pastikan di atas elemen lain */
+  background-color: #0e0e0e !important;
+  padding: 10px 20px; /* Sesuaikan padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
+  height: 56px;
+}
+ 
+  .nav-link:hover {
+    background-color: #010e1b;
+    color: #1d7bd9;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-link {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 10px; 
+    font-size: 16px; 
+    text-decoration: none; 
+  }
+
+  .nav-link .title {
+    flex-grow: 1;
+    margin-left: 10px; 
+  }
+  
+  /* nav color in sidebar */
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Pastikan semua elemen rata kiri */
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    background-color: #111212;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  /* bg dropdown menu */
+.dropdown-menu {
+  background-color: #fff; /* Latar belakang putih */
+  border-radius: 5px; 
+  box-shadow: 0 4px 6px rgba(156, 94, 94, 0.1);
+  padding: 0; 
+  margin-top: 5px;
+}
+
+/* Gaya untuk item dropdown */
+.dropdown-item {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 10px 15px; 
+  font-size: 14px; 
+  color: #000; 
+  border-radius: 5px;
+  transition: all 0.3s; 
+}
+
+/* Hover efek untuk dropdown-item */
+.dropdown-item:hover {
+  background-color: #0861ba; /* Latar belakang saat hover */
+  color: #01070c; /* Warna teks saat hover */
+  font-weight: bold;
+}
+
+/* Aktifkan pointer untuk dropdown */
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+/* When sidebar is collapsed */
+.sidebar.collapsed {
+  transform: translateX(-250px);
+}
+.sidebar.collapsed ~ main {
+  margin-left: 0;
+}
+
+.sidebar.collapsed ~ footer {
+  left: 0;
+  width: 100%;
+}
+
+
+main.expanded {
+  margin-left: 60px; /* Hilangkan margin saat sidebar di-collapse */
+  padding-left: 20px; /* Tetap pertahankan padding */
+}
+
+.sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: calc(100vh - 56px - 60px); /* Account for header and footer */
+  width: 250px;
+  background-color: #0f0f0f !important;
+  color: white !important;
+  z-index: 900;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  padding-bottom: 20px; /* Add padding at bottom */
+}
+
+/* Saat sidebar disembunyikan */
+.sidebar.collapsed + main {
+  margin-left: 0;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-250px);
+    z-index: 1000;
+  }
+  
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  
+  main {
+    margin-left: 0;
+  }
+  
+  footer {
+    left: 0;
+    width: 100%;
+  }
+}
+
+/* Improved scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0px; /* Match sidebar width */
+  right: 0; /* Stretch to right edge */
+  width: auto; /* Let it stretch naturally */
+  background-color: #0e0e0e !important;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 800;
+  transition: all 0.3s;
+}
+/* Main content adjustment */
+main {
+  margin-left: 250px;
+  padding: 20px;
+  padding-top: 76px; /* Header height + some space */
+  padding-bottom: 80px; /* Footer height + some space */
+  min-height: calc(100vh - 56px - 60px); /* Account for header and footer */
+  transition: all 0.3s;
+}
+body {
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #495057;
+  margin-bottom: 30px;
+}
+
+/* Styling label */
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #495057;
+}
+
+/* Styling input nd textarea */
+.form-control {
+  border-radius: 9px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.d-flex {
+  display: flex;
+  gap: 10px; /* Beri jarak antara tombol */
+  flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+
+/* Styling tombol */
+.btn {
+  border-radius: 8px;
+  padding: 9px 15px;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+/* Styling untuk input readonly */
+.form-control[readonly] {
+  background-color: #f1f3f5;
+}
+
+/* Styling select */
+select.form-control {
+  padding: 14px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+/* Layout untuk form */
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+      padding: 20px;
+  }
+
+  .form-control {
+      font-size: 0.9rem;
+  }
+
+  .btn {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 15px;
+  }
+  
+}
+
+/* Styling untuk tabel */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table thead tr {
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  /* padding: 12px 15px; */
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+}
+.table td:last-child {
+  width: 100px; /* Action column lebih kecil */
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #007bff;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-responsive {
+  max-height: 70vh; /* Supaya ada batasan tinggi */
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .btn-sm {
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+}
+
+/* Styling action button */
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.875em;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+    /* Add hover effect for table rows */
+    .table-hover tbody tr:hover {
+      background-color: #f5f5f5;
+      cursor: pointer;
+  }
+  
+  /* Optional: Add transition for smooth effect */
+  .table-hover tbody tr {
+      transition: background-color 0.2s ease;
+  }
+  /* Action buttons styling */
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Table header styling */
+.table-dark th {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Table border styling */
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+#instituisaunField {
+  transition: all 0.3s ease;
+}
+
+
+
