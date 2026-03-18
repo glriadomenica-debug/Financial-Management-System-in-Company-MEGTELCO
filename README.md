@@ -64,3 +64,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+**Step Import database**
+- Buka Xampp (version 3.3.0)
+- Run Apache (klik Admin)
+- Create db name (sistemamegtelco)
+- Import database yang ada di file database
+
+
+
